@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Hello building!</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./lib/bootstrap.min.css">
+    <script src="./lib/xbim-viewer.js"></script>
+    <script src="js/crap.js"></script>
+
+    <style>
+        .fariba {
+            width: 100%;
+            height: 500px;
+            background-color: beige;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Faribas Project <span class="text-muted">&nbsp;(<span id="fps"></span><span>fps)</span></span></h2>
+        <canvas class="fariba" id="viewer"></canvas>
+
+        <div>
+            <button type="button" class="btn btn-secondary" onclick="showSide(ViewType.FRONT);">Front</button>
+            <button type="button" class="btn btn-secondary" onclick="showSide(ViewType.BACK);">Back</button>
+            <button type="button" class="btn btn-secondary" onclick="showSide(ViewType.TOP);">Top</button>
+            <button type="button" class="btn btn-secondary" onclick="showSide(ViewType.BOTTOM);">Bottom</button>
+            <button type="button" class="btn btn-secondary" onclick="showSide(ViewType.LEFT);">Left</button>
+            <button type="button" class="btn btn-secondary" onclick="showSide(ViewType.RIGHT);">Right</button>
+        </div>
+
+
+        <h2>Datei auswählen</h2>
+
+        <div class="mb-3">
+            <label for="formFile" class="form-label">Select wexbim file</label>
+            <input class="form-control" type="file" id="file-wexbim">
+        </div>
+    </div>
+
+</body>
+
+</html>
